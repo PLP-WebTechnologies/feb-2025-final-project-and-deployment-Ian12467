@@ -1,4 +1,22 @@
-undefined
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luxe Gems - Exclusive handcrafted jewelry featuring limited edition collections and artisan craftsmanship">
+    <title>Luxe Gems | Exclusive Handcrafted Jewelry</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/image-optimization.css">
+    <link rel="stylesheet" href="css/hero-enhancement.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/main.js" defer></script>
+    <script src="js/image-loader.js" defer></script>
+    <script src="js/hero-animation.js" defer></script>
+    <script src="js/pexels-api.js" defer></script>
+    <script src="js/shopify-integration.js" defer></script>
+</head>
 <body>
     <header class="header">
         <div class="header__container">
@@ -71,20 +89,44 @@ undefined
 
     <main>
         <section class="hero">
+            <div class="hero__video-container">
+                <video class="hero__video" autoplay muted loop playsinline poster="https://images.pexels.com/photos/1457801/pexels-photo-1457801.jpeg?auto=compress&cs=tinysrgb&w=1600">
+                    <source src="https://cdn.pixabay.com/vimeo/328240392/jewelry-23378.mp4?width=1280&hash=f1c3e7b6c7d9c5e5e5e5e5e5e5e5e5e5e5e5e5e5" type="video/mp4">
+                </video>
+                <div class="hero__overlay"></div>
+            </div>
+            
+            <div class="luxury-accent luxury-accent--top-right"></div>
+            <div class="luxury-accent luxury-accent--bottom-left"></div>
+            
             <div class="hero__content">
+                <img src="https://via.placeholder.com/180x80/ffffff/3A7BD5?text=LUXE+GEMS" alt="Luxe Gems Logo" class="hero__logo">
                 <h2 class="hero__title">Artisan Craftsmanship</h2>
                 <p class="hero__subtitle">Discover our limited edition collections</p>
-                <a href="pages/limited-editions.html" class="btn btn--primary">Shop Limited Editions</a>
+                <div class="hero__buttons">
+                    <a href="pages/limited-editions.html" class="btn btn--primary">Shop Limited Editions</a>
+                    <a href="pages/collections.html" class="btn btn--outline">Explore Collections</a>
+                </div>
+            </div>
+            
+            <div class="hero__scroll-indicator" onclick="document.querySelector('.featured-collection').scrollIntoView({behavior: 'smooth'})">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19 12L12 19L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
             </div>
         </section>
 
         <section class="featured-collection">
             <div class="container">
-                <h2 class="section-title">New Arrivals</h2>
+                <div class="featured-collection__header">
+                    <h2 class="section-title">New Arrivals</h2>
+                    <p class="featured-collection__subtitle">Discover our latest handcrafted pieces</p>
+                </div>
                 <div class="featured-collection__grid">
-                    <article class="product-card">
+                    <article class="product-card" data-category="necklaces">
                         <figure class="product-card__image">
-                            <img src="images/products/necklace-1.jpg" alt="Gold pendant necklace with emerald stone" loading="lazy">
+                            <img src="https://images.pexels.com/photos/1454171/pexels-photo-1454171.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gold pendant necklace with emerald stone" loading="lazy">
                             <div class="product-card__badge product-card__badge--limited">Limited Edition</div>
                         </figure>
                         <div class="product-card__content">
@@ -94,9 +136,9 @@ undefined
                             <button class="btn btn--secondary product-card__btn">Add to Cart</button>
                         </div>
                     </article>
-                    <article class="product-card">
+                    <article class="product-card" data-category="bracelets">
                         <figure class="product-card__image">
-                            <img src="images/products/bracelet-1.jpg" alt="Silver chain bracelet with sapphire charm" loading="lazy">
+                            <img src="https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Silver chain bracelet with sapphire charm" loading="lazy">
                             <div class="product-card__badge product-card__badge--limited">Limited Edition</div>
                         </figure>
                         <div class="product-card__content">
@@ -106,9 +148,9 @@ undefined
                             <button class="btn btn--secondary product-card__btn">Add to Cart</button>
                         </div>
                     </article>
-                    <article class="product-card">
+                    <article class="product-card" data-category="rings">
                         <figure class="product-card__image">
-                            <img src="images/products/ring-1.jpg" alt="Rose gold ring with diamond accents" loading="lazy">
+                            <img src="https://images.pexels.com/photos/1457801/pexels-photo-1457801.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Rose gold ring with diamond accents" loading="lazy">
                         </figure>
                         <div class="product-card__content">
                             <h3 class="product-card__title">Rose Gold Diamond Ring</h3>
@@ -116,9 +158,9 @@ undefined
                             <button class="btn btn--secondary product-card__btn">Add to Cart</button>
                         </div>
                     </article>
-                    <article class="product-card">
+                    <article class="product-card" data-category="earrings">
                         <figure class="product-card__image">
-                            <img src="images/products/earrings-1.jpg" alt="Pearl drop earrings with silver accents" loading="lazy">
+                            <img src="https://images.pexels.com/photos/1413420/pexels-photo-1413420.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Pearl drop earrings with silver accents" loading="lazy">
                         </figure>
                         <div class="product-card__content">
                             <h3 class="product-card__title">Pearl Drop Earrings</h3>
@@ -141,7 +183,7 @@ undefined
                     <a href="pages/artisan-spotlight.html" class="btn btn--outline">Explore Artisan Stories</a>
                 </div>
                 <div class="artisan-preview__image">
-                    <img src="images/artisan-workshop.jpg" alt="Jewelry artisan working in studio" loading="lazy">
+                    <img src="https://images.pexels.com/photos/3768894/pexels-photo-3768894.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Jewelry artisan working in studio" loading="lazy">
                 </div>
             </div>
         </section>
@@ -177,7 +219,7 @@ undefined
                         <a href="pages/limited-editions.html" class="btn btn--primary">Get Notified</a>
                     </div>
                     <div class="limited-edition-preview__image">
-                        <img src="images/limited-edition-preview.jpg" alt="Ocean Treasures Collection preview" loading="lazy">
+                        <img src="https://images.pexels.com/photos/10513822/pexels-photo-10513822.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ocean Treasures Collection preview" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -189,7 +231,7 @@ undefined
                 <div class="style-guide-preview__grid">
                     <article class="style-card">
                         <figure class="style-card__image">
-                            <img src="images/style/summer-style.jpg" alt="Summer beach styling with layered necklaces" loading="lazy">
+                            <img src="https://images.pexels.com/photos/1374910/pexels-photo-1374910.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Summer beach styling with layered necklaces" loading="lazy">
                         </figure>
                         <div class="style-card__content">
                             <h3 class="style-card__title">Summer Beach Vibes</h3>
@@ -199,7 +241,7 @@ undefined
                     </article>
                     <article class="style-card">
                         <figure class="style-card__image">
-                            <img src="images/style/office-style.jpg" alt="Professional office styling with statement earrings" loading="lazy">
+                            <img src="https://images.pexels.com/photos/1616096/pexels-photo-1616096.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Professional office styling with statement earrings" loading="lazy">
                         </figure>
                         <div class="style-card__content">
                             <h3 class="style-card__title">Office Elegance</h3>
@@ -209,7 +251,7 @@ undefined
                     </article>
                     <article class="style-card">
                         <figure class="style-card__image">
-                            <img src="images/style/evening-style.jpg" alt="Evening gala styling with diamond accessories" loading="lazy">
+                            <img src="https://images.pexels.com/photos/1619801/pexels-photo-1619801.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Evening gala styling with diamond accessories" loading="lazy">
                         </figure>
                         <div class="style-card__content">
                             <h3 class="style-card__title">Evening Glamour</h3>
@@ -325,7 +367,7 @@ undefined
                 <p class="footer__copyright">&copy; 2025 Luxe Gems. All rights reserved.</p>
                 <div class="footer__payment">
                     <span>Payment Methods:</span>
-                    <img src="images/payment-methods.png" alt="Accepted payment methods" width="200" height="30">
+                    <img src="https://via.placeholder.com/200x30/ffffff/000000?text=Payment+Methods" alt="Accepted payment methods" width="200" height="30">
                 </div>
             </div>
         </div>
