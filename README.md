@@ -1,5 +1,7 @@
 # Luxe Gems - Jewelry E-commerce Website
 
+live website URL : https://luxe-gems.netlify.app/
+
 A comprehensive, professional jewelry e-commerce website for a luxury brand focused on limited edition collections, artisan craftsmanship, and custom orders.
 
 ## Project Overview
