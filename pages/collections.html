@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover styling tips and inspiration for your jewelry collection from Luxe Gems">
-    <title>Style & Inspiration | Luxe Gems</title>
+    <meta name="description" content="Explore Luxe Gems' exquisite jewelry collections - necklaces, bracelets, rings, and earrings">
+    <title>Collections | Luxe Gems</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/page-styles.css">
+    <link rel="stylesheet" href="../css/collection-styles.css">
+    <link rel="stylesheet" href="../css/image-optimization.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="../js/main.js" defer></script>
+    <script src="../js/image-loader.js" defer></script>
     <script src="../js/pexels-api.js" defer></script>
 </head>
 <body>
@@ -32,10 +36,10 @@
                     <li class="header__menu-item">
                         <a href="collections.html" class="header__menu-link">Collections</a>
                         <ul class="header__submenu">
-                            <li><a href="collections.html#necklaces">Necklaces</a></li>
-                            <li><a href="collections.html#bracelets">Bracelets</a></li>
-                            <li><a href="collections.html#rings">Rings</a></li>
-                            <li><a href="collections.html#earrings">Earrings</a></li>
+                            <li><a href="#necklaces">Necklaces</a></li>
+                            <li><a href="#bracelets">Bracelets</a></li>
+                            <li><a href="#rings">Rings</a></li>
+                            <li><a href="#earrings">Earrings</a></li>
                         </ul>
                     </li>
                     <li class="header__menu-item">
@@ -85,150 +89,113 @@
     <main>
         <section class="page-hero">
             <div class="page-hero__content">
-                <h1 class="page-hero__title">Style & Inspiration</h1>
-                <p class="page-hero__subtitle">Discover how to style your jewelry for any occasion</p>
+                <h1 class="page-hero__title">Our Collections</h1>
+                <p class="page-hero__subtitle">Explore our exquisite jewelry pieces crafted with precision and passion</p>
             </div>
         </section>
 
-        <section class="style-guide" id="summer">
+        <section class="collection-layout">
             <div class="container">
-                <h2 class="section-title">Summer Beach Vibes</h2>
-                <div class="style-guide__content">
-                    <div class="style-guide__image">
-                        <img src="../images/style/summer-style-large.jpg" alt="Model wearing layered necklaces with summer outfit" loading="lazy">
+                <div class="collection-layout__content">
+                    <div class="collection-layout__main">
+                        <section class="collection" id="necklaces">
+                            <h2 class="section-title">Necklaces</h2>
+                            <div class="collection__grid">
+                                <!-- Product cards will be populated by JavaScript -->
+                            </div>
+                        </section>
+                        
+                        <section class="collection" id="bracelets">
+                            <h2 class="section-title">Bracelets</h2>
+                            <div class="collection__grid">
+                                <!-- Product cards will be populated by JavaScript -->
+                            </div>
+                        </section>
+                        
+                        <section class="collection" id="rings">
+                            <h2 class="section-title">Rings</h2>
+                            <div class="collection__grid">
+                                <!-- Product cards will be populated by JavaScript -->
+                            </div>
+                        </section>
+                        
+                        <section class="collection" id="earrings">
+                            <h2 class="section-title">Earrings</h2>
+                            <div class="collection__grid">
+                                <!-- Product cards will be populated by JavaScript -->
+                            </div>
+                        </section>
                     </div>
-                    <div class="style-guide__text">
-                        <p class="style-guide__intro">Embrace the carefree spirit of summer with delicate layered necklaces that catch the sunlight and complement your beach attire.</p>
-                        
-                        <h3 class="style-guide__subtitle">How to Layer</h3>
-                        <ul class="style-guide__list">
-                            <li>Start with a choker or short pendant (14-16 inches)</li>
-                            <li>Add a medium-length necklace (18-20 inches)</li>
-                            <li>Finish with a longer statement piece (22-24 inches)</li>
-                            <li>Mix metals for a modern, effortless look</li>
-                        </ul>
-                        
-                        <h3 class="style-guide__subtitle">Featured Pieces</h3>
-                        <div class="style-guide__products">
-                            <div class="style-guide__product">
-                                <img src="../images/products/necklace-2.jpg" alt="Gold shell pendant necklace" loading="lazy">
-                                <h4>Shell Pendant Necklace</h4>
-                                <p>$450</p>
-                                <a href="#" class="btn btn--small btn--secondary">Shop Now</a>
+                    
+                    <div class="collection-filters">
+                        <div class="collection-filters__content">
+                            <h2>Filter By</h2>
+                            <div class="collection-filters__group">
+                                <h3>Filter By Material</h3>
+                                <div class="collection-filters__checkboxes">
+                                    <label class="collection-filters__checkbox">
+                                        <input type="checkbox" name="material" value="gold">
+                                        <span>Gold</span>
+                                    </label>
+                                    <label class="collection-filters__checkbox">
+                                        <input type="checkbox" name="material" value="silver">
+                                        <span>Silver</span>
+                                    </label>
+                                    <label class="collection-filters__checkbox">
+                                        <input type="checkbox" name="material" value="rose-gold">
+                                        <span>Rose Gold</span>
+                                    </label>
+                                    <label class="collection-filters__checkbox">
+                                        <input type="checkbox" name="material" value="platinum">
+                                        <span>Platinum</span>
+                                    </label>
+                                </div>
                             </div>
-                            <div class="style-guide__product">
-                                <img src="../images/products/necklace-3.jpg" alt="Turquoise beaded necklace" loading="lazy">
-                                <h4>Turquoise Beaded Necklace</h4>
-                                <p>$380</p>
-                                <a href="#" class="btn btn--small btn--secondary">Shop Now</a>
+                            <div class="collection-filters__group">
+                                <h3>Filter By Gemstone</h3>
+                                <div class="collection-filters__checkboxes">
+                                    <label class="collection-filters__checkbox">
+                                        <input type="checkbox" name="gemstone" value="diamond">
+                                        <span>Diamond</span>
+                                    </label>
+                                    <label class="collection-filters__checkbox">
+                                        <input type="checkbox" name="gemstone" value="emerald">
+                                        <span>Emerald</span>
+                                    </label>
+                                    <label class="collection-filters__checkbox">
+                                        <input type="checkbox" name="gemstone" value="sapphire">
+                                        <span>Sapphire</span>
+                                    </label>
+                                    <label class="collection-filters__checkbox">
+                                        <input type="checkbox" name="gemstone" value="pearl">
+                                        <span>Pearl</span>
+                                    </label>
+                                </div>
                             </div>
-                            <div class="style-guide__product">
-                                <img src="../images/products/necklace-4.jpg" alt="Long pearl station necklace" loading="lazy">
-                                <h4>Pearl Station Necklace</h4>
-                                <p>$520</p>
-                                <a href="#" class="btn btn--small btn--secondary">Shop Now</a>
+                            <div class="collection-filters__group">
+                                <h3>Price Range</h3>
+                                <div class="collection-filters__range">
+                                    <input type="range" min="0" max="5000" step="100" value="2500" id="price-range">
+                                    <div class="collection-filters__range-labels">
+                                        <span>$0</span>
+                                        <span id="price-value">$2,500</span>
+                                        <span>$5,000+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn--primary collection-filters__apply">Apply Filters</button>
+                        </div>
+                        <div class="collection-filters__featured">
+                            <div class="collection-filters__featured-image">
+                                <img src="../images/featured-collection.jpg" alt="Featured collection of luxury jewelry" loading="lazy">
+                            </div>
+                            <div class="collection-filters__featured-content">
+                                <h3>Curated Collections</h3>
+                                <p>Discover our expertly curated collections designed to complement any style or occasion.</p>
+                                <a href="limited-editions.html" class="btn btn--outline">Explore Limited Editions</a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="style-guide" id="office">
-            <div class="container">
-                <h2 class="section-title">Office Elegance</h2>
-                <div class="style-guide__content">
-                    <div class="style-guide__text">
-                        <p class="style-guide__intro">Elevate your professional attire with sophisticated statement earrings that transition seamlessly from day to evening events.</p>
-                        
-                        <h3 class="style-guide__subtitle">Styling Tips</h3>
-                        <ul class="style-guide__list">
-                            <li>Choose earrings that frame your face without overwhelming it</li>
-                            <li>For conservative offices, opt for studs or small hoops during the day</li>
-                            <li>Keep a pair of statement earrings in your desk drawer for after-work events</li>
-                            <li>Balance bold earrings with minimal necklaces or bracelets</li>
-                        </ul>
-                        
-                        <h3 class="style-guide__subtitle">Featured Pieces</h3>
-                        <div class="style-guide__products">
-                            <div class="style-guide__product">
-                                <img src="../images/products/earrings-2.jpg" alt="Pearl drop earrings" loading="lazy">
-                                <h4>Pearl Drop Earrings</h4>
-                                <p>$650</p>
-                                <a href="#" class="btn btn--small btn--secondary">Shop Now</a>
-                            </div>
-                            <div class="style-guide__product">
-                                <img src="../images/products/earrings-3.jpg" alt="Gold geometric earrings" loading="lazy">
-                                <h4>Geometric Gold Earrings</h4>
-                                <p>$480</p>
-                                <a href="#" class="btn btn--small btn--secondary">Shop Now</a>
-                            </div>
-                            <div class="style-guide__product">
-                                <img src="../images/products/earrings-4.jpg" alt="Sapphire stud earrings" loading="lazy">
-                                <h4>Sapphire Studs</h4>
-                                <p>$890</p>
-                                <a href="#" class="btn btn--small btn--secondary">Shop Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="style-guide__image">
-                        <img src="../images/style/office-style-large.jpg" alt="Professional woman wearing statement earrings with business attire" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="style-guide" id="evening">
-            <div class="container">
-                <h2 class="section-title">Evening Glamour</h2>
-                <div class="style-guide__content">
-                    <div class="style-guide__image">
-                        <img src="../images/style/evening-style-large.jpg" alt="Woman in evening gown with diamond jewelry" loading="lazy">
-                    </div>
-                    <div class="style-guide__text">
-                        <p class="style-guide__intro">Make a statement at special occasions with carefully selected pieces that enhance your formal attire without competing with it.</p>
-                        
-                        <h3 class="style-guide__subtitle">Evening Essentials</h3>
-                        <ul class="style-guide__list">
-                            <li>Choose one statement piece as your focal point</li>
-                            <li>Consider your neckline when selecting necklaces</li>
-                            <li>For strapless gowns, showcase a dramatic necklace or statement earrings</li>
-                            <li>High necklines pair beautifully with drop earrings and bracelets</li>
-                            <li>Don't forget about hair accessories for added glamour</li>
-                        </ul>
-                        
-                        <h3 class="style-guide__subtitle">Featured Pieces</h3>
-                        <div class="style-guide__products">
-                            <div class="style-guide__product">
-                                <img src="../images/products/necklace-5.jpg" alt="Diamond pendant necklace" loading="lazy">
-                                <h4>Diamond Pendant Necklace</h4>
-                                <p>$2,450</p>
-                                <a href="#" class="btn btn--small btn--secondary">Shop Now</a>
-                            </div>
-                            <div class="style-guide__product">
-                                <img src="../images/products/bracelet-2.jpg" alt="Diamond tennis bracelet" loading="lazy">
-                                <h4>Diamond Tennis Bracelet</h4>
-                                <p>$3,200</p>
-                                <a href="#" class="btn btn--small btn--secondary">Shop Now</a>
-                            </div>
-                            <div class="style-guide__product">
-                                <img src="../images/products/earrings-5.jpg" alt="Chandelier diamond earrings" loading="lazy">
-                                <h4>Chandelier Earrings</h4>
-                                <p>$1,950</p>
-                                <a href="#" class="btn btn--small btn--secondary">Shop Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="style-quiz">
-            <div class="container">
-                <h2 class="section-title">Find Your Signature Style</h2>
-                <div class="style-quiz__content">
-                    <p class="style-quiz__intro">Not sure which jewelry styles suit you best? Take our quick style quiz to discover pieces that complement your personal aesthetic and lifestyle.</p>
-                    <a href="#" class="btn btn--primary">Take the Style Quiz</a>
                 </div>
             </div>
         </section>
@@ -303,10 +270,10 @@
                     <h4 class="footer__heading">Shop</h4>
                     <ul class="footer__links">
                         <li><a href="limited-editions.html">Limited Editions</a></li>
-                        <li><a href="collections.html#necklaces">Necklaces</a></li>
-                        <li><a href="collections.html#bracelets">Bracelets</a></li>
-                        <li><a href="collections.html#rings">Rings</a></li>
-                        <li><a href="collections.html#earrings">Earrings</a></li>
+                        <li><a href="#necklaces">Necklaces</a></li>
+                        <li><a href="#bracelets">Bracelets</a></li>
+                        <li><a href="#rings">Rings</a></li>
+                        <li><a href="#earrings">Earrings</a></li>
                     </ul>
                 </div>
                 <div class="footer__column">

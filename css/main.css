@@ -11,6 +11,9 @@
   --color-gray: #6c757d;
   --color-light-gray: #e9ecef;
   
+  /* Collection Page Styles */
+  --collection-grid-gap: 2rem;
+  
   /* Typography */
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Montserrat', sans-serif;
