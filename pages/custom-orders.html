@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Request custom-designed jewelry pieces tailored to your unique vision and preferences">
+    <title>Custom Orders | Luxe Gems</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="../js/main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="../index.html">
+                    <h1>Luxe Gems</h1>
+                </a>
+            </div>
+            <nav class="header__nav" role="navigation" aria-label="Main navigation">
+                <button class="header__menu-toggle" aria-expanded="false" aria-controls="main-menu">
+                    <span class="sr-only">Menu</span>
+                    <span class="header__menu-icon"></span>
+                </button>
+                <ul id="main-menu" class="header__menu">
+                    <li class="header__menu-item header__menu-item--featured">
+                        <a href="limited-editions.html" class="header__menu-link">Limited Editions</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="collections.html" class="header__menu-link">Collections</a>
+                        <ul class="header__submenu">
+                            <li><a href="collections.html#necklaces">Necklaces</a></li>
+                            <li><a href="collections.html#bracelets">Bracelets</a></li>
+                            <li><a href="collections.html#rings">Rings</a></li>
+                            <li><a href="collections.html#earrings">Earrings</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="artisan-spotlight.html" class="header__menu-link">Artisan Spotlight</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="style-inspiration.html" class="header__menu-link">Style & Inspiration</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="jewelry-care.html" class="header__menu-link">Jewelry Care</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="custom-orders.html" class="header__menu-link">Custom Orders</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <a href="#" class="header__action-link" aria-label="Search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="#" class="header__action-link" aria-label="Wishlist">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.84 4.61C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.57831 8.50903 2.99871 7.05 2.99871C5.59096 2.99871 4.19169 3.57831 3.16 4.61C2.1283 5.64169 1.54871 7.04097 1.54871 8.5C1.54871 9.95903 2.1283 11.3583 3.16 12.39L12 21.23L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6054C22.3095 9.93789 22.4518 9.22248 22.4518 8.5C22.4518 7.77752 22.3095 7.0621 22.0329 6.39464C21.7563 5.72718 21.351 5.12075 20.84 4.61V4.61Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="#" class="header__action-link" aria-label="Shopping cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="header__cart-count">0</span>
+                </a>
+                <a href="#" class="header__action-link" aria-label="Account">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="page-hero__content">
+                <h1 class="page-hero__title">Custom Orders</h1>
+                <p class="page-hero__subtitle">Create a one-of-a-kind piece that tells your unique story</p>
+            </div>
+        </section>
+
+        <section class="custom-intro">
+            <div class="container">
+                <div class="custom-intro__content">
+                    <div class="custom-intro__text">
+                        <h2 class="section-title">Your Vision, Our Craftsmanship</h2>
+                        <p>At Luxe Gems, we believe that jewelry should be as unique as the person wearing it. Our custom design service allows you to collaborate with our master artisans to create a truly one-of-a-kind piece that perfectly captures your vision.</p>
+                        <p>Whether you're designing an engagement ring, reimagining a family heirloom, or creating a statement piece for a special occasion, our team will guide you through every step of the process.</p>
+                    </div>
+                    <div class="custom-intro__image">
+                        <img src="../images/custom/custom-design-process.jpg" alt="Custom jewelry design process" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="custom-process">
+            <div class="container">
+                <h2 class="section-title">Our Custom Design Process</h2>
+                <div class="custom-process__steps">
+                    <div class="custom-process__step">
+                        <div class="custom-process__step-number">1</div>
+                        <h3 class="custom-process__step-title">Initial Consultation</h3>
+                        <p class="custom-process__step-description">Share your vision, preferences, and budget with our design team. We'll discuss materials, gemstones, and design elements to bring your idea to life.</p>
+                    </div>
+                    <div class="custom-process__step">
+                        <div class="custom-process__step-number">2</div>
+                        <h3 class="custom-process__step-title">Design Concept</h3>
+                        <p class="custom-process__step-description">Our designers will create detailed sketches and 3D renderings of your piece, allowing you to visualize the final product and make any necessary adjustments.</p>
+                    </div>
+                    <div class="custom-process__step">
+                        <div class="custom-process__step-number">3</div>
+                        <h3 class="custom-process__step-title">Material Selection</h3>
+                        <p class="custom-process__step-description">Choose from our curated selection of ethically sourced gemstones and precious metals, or provide your own materials for a truly personal touch.</p>
+                    </div>
+                    <div class="custom-process__step">
+                        <div class="custom-process__step-number">4</div>
+                        <h3 class="custom-process__step-title">Crafting</h3>
+                        <p class="custom-process__step-description">Our master artisans will handcraft your piece with meticulous attention to detail, using traditional techniques alongside modern technology.</p>
+                    </div>
+                    <div class="custom-process__step">
+                        <div class="custom-process__step-number">5</div>
+                        <h3 class="custom-process__step-title">Final Reveal</h3>
+                        <p class="custom-process__step-description">Receive your finished piece, complete with a certificate of authenticity and custom packaging to preserve your treasure for generations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="custom-gallery">
+            <div class="container">
+                <h2 class="section-title">Custom Creation Gallery</h2>
+                <p class="custom-gallery__intro">Explore a selection of custom pieces we've created for our clients. Each tells a unique story and showcases the possibilities of our bespoke service.</p>
+                <div class="gallery custom-gallery__grid">
+                    <figure class="gallery__item">
+                        <img src="../images/custom/custom-ring-1.jpg" alt="Custom engagement ring with oval diamond" class="gallery__image" loading="lazy">
+                    </figure>
+                    <figure class="gallery__item">
+                        <img src="../images/custom/custom-necklace-1.jpg" alt="Custom pendant with family birthstones" class="gallery__image" loading="lazy">
+                    </figure>
+                    <figure class="gallery__item">
+                        <img src="../images/custom/custom-bracelet-1.jpg" alt="Custom gold cuff with engraved initials" class="gallery__image" loading="lazy">
+                    </figure>
+                    <figure class="gallery__item">
+                        <img src="../images/custom/custom-earrings-1.jpg" alt="Custom pearl and diamond earrings" class="gallery__image" loading="lazy">
+                    </figure>
+                    <figure class="gallery__item">
+                        <img src="../images/custom/custom-ring-2.jpg" alt="Custom sapphire and diamond ring" class="gallery__image" loading="lazy">
+                    </figure>
+                    <figure class="gallery__item">
+                        <img src="../images/custom/custom-necklace-2.jpg" alt="Custom locket with family photo" class="gallery__image" loading="lazy">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="custom-form">
+            <div class="container">
+                <h2 class="section-title">Request a Custom Design</h2>
+                <div class="custom-form__content">
+                    <div class="custom-form__info">
+                        <p>Ready to start your custom jewelry journey? Fill out the form to request a consultation with our design team. We'll contact you within 48 hours to schedule your appointment.</p>
+                        <div class="custom-form__contact">
+                            <p><strong>Prefer to speak with us directly?</strong></p>
+                            <p>Call us at (555) 123-4567</p>
+                            <p>Email us at custom@luxegems.com</p>
+                            <p>Visit our design studio at 123 Jewelry Lane, New York, NY</p>
+                        </div>
+                    </div>
+                    <form id="custom-order-form" class="custom-form__form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Type of Jewelry *</label>
+                            <select id="type" name="type" required>
+                                <option value="">Select an option</option>
+                                <option value="ring">Ring</option>
+                                <option value="necklace">Necklace</option>
+                                <option value="bracelet">Bracelet</option>
+                                <option value="earrings">Earrings</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select an option</option>
+                                <option value="1000-3000">$1,000 - $3,000</option>
+                                <option value="3000-5000">$3,000 - $5,000</option>
+                                <option value="5000-10000">$5,000 - $10,000</option>
+                                <option value="10000+">$10,000+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="timeline">Desired Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select an option</option>
+                                <option value="1-2-months">1-2 months</option>
+                                <option value="3-4-months">3-4 months</option>
+                                <option value="5-6-months">5-6 months</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Design Description *</label>
+                            <textarea id="description" name="description" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="attachments">Reference Images (optional)</label>
+                            <input type="file" id="attachments" name="attachments" multiple accept="image/*">
+                            <small>Upload sketches, inspiration photos, or examples (Max 5MB each)</small>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I agree to the <a href="#">Terms & Conditions</a> *</label>
+                        </div>
+                        <button type="submit" class="btn btn--primary">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="custom-testimonials">
+            <div class="container">
+                <h2 class="section-title">Client Stories</h2>
+                <div class="custom-testimonials__grid">
+                    <div class="testimonial">
+                        <div class="testimonial__content">
+                            <p>"Working with Luxe Gems to design my engagement ring was an incredible experience. They took my vague ideas and transformed them into something more beautiful than I could have imagined."</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <img src="../images/custom/testimonial-1.jpg" alt="Sarah M." class="testimonial__image">
+                            <div class="testimonial__info">
+                                <p class="testimonial__name">Sarah M.</p>
+                                <p class="testimonial__project">Custom Engagement Ring</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial__content">
+                            <p>"I wanted to create a special piece using gemstones from my grandmother's jewelry. The team at Luxe Gems handled these precious heirlooms with care and created a modern necklace that honors her memory."</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <img src="../images/custom/testimonial-2.jpg" alt="Michael T." class="testimonial__image">
+                            <div class="testimonial__info">
+                                <p class="testimonial__name">Michael T.</p>
+                                <p class="testimonial__project">Family Heirloom Redesign</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial__content">
+                            <p>"For our 25th anniversary, I wanted something truly unique. The custom bracelet they created incorporates elements from our journey together. It's not just jewelry—it's our story."</p>
+                        </div>
+                        <div class="testimonial__author">
+                            <img src="../images/custom/testimonial-3.jpg" alt="Elena & David K." class="testimonial__image">
+                            <div class="testimonial__info">
+                                <p class="testimonial__name">Elena & David K.</p>
+                                <p class="testimonial__project">Anniversary Bracelet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter__content">
+                    <h2 class="newsletter__title">Join Our Community</h2>
+                    <p class="newsletter__text">Subscribe to receive updates on new collections, limited edition drops, and styling tips.</p>
+                    <form id="newsletter-form" class="newsletter__form">
+                        <div class="newsletter__input-group">
+                            <input type="email" id="newsletter-email" class="newsletter__input" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn--primary newsletter__submit">Subscribe</button>
+                        </div>
+                        <div class="newsletter__preferences">
+                            <p>I'm interested in:</p>
+                            <div class="newsletter__checkbox-group">
+                                <label class="newsletter__checkbox">
+                                    <input type="checkbox" name="topics" value="new-collections" checked>
+                                    <span>New Collections</span>
+                                </label>
+                                <label class="newsletter__checkbox">
+                                    <input type="checkbox" name="topics" value="limited-editions" checked>
+                                    <span>Limited Editions</span>
+                                </label>
+                                <label class="newsletter__checkbox">
+                                    <input type="checkbox" name="topics" value="styling-tips">
+                                    <span>Styling Tips</span>
+                                </label>
+                                <label class="newsletter__checkbox">
+                                    <input type="checkbox" name="topics" value="special-offers">
+                                    <span>Special Offers</span>
+                                </label>
+                            </div>
+                        </div>
+                        <p class="newsletter__privacy">By subscribing, you agree to our <a href="#">Privacy Policy</a>.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__column">
+                    <h3 class="footer__title">Luxe Gems</h3>
+                    <p class="footer__description">Handcrafted luxury jewelry featuring limited edition collections and artisan craftsmanship.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 2H7C4.23858 2 2 4.23858 2 7V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V7C22 4.23858 19.7614 2 17 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61991 14.1902 8.22773 13.4229 8.09406 12.5922C7.9604 11.7615 8.09206 10.9099 8.47032 10.1584C8.84858 9.40685 9.45418 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87658 12.63 8C13.4789 8.12588 14.2648 8.52146 14.8717 9.12831C15.4785 9.73515 15.8741 10.5211 16 11.37Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17.5 6.5H17.51" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Pinterest">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__heading">Shop</h4>
+                    <ul class="footer__links">
+                        <li><a href="limited-editions.html">Limited Editions</a></li>
+                        <li><a href="collections.html#necklaces">Necklaces</a></li>
+                        <li><a href="collections.html#bracelets">Bracelets</a></li>
+                        <li><a href="collections.html#rings">Rings</a></li>
+                        <li><a href="collections.html#earrings">Earrings</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__heading">About</h4>
+                    <ul class="footer__links">
+                        <li><a href="artisan-spotlight.html">Our Artisans</a></li>
+                        <li><a href="style-inspiration.html">Style & Inspiration</a></li>
+                        <li><a href="jewelry-care.html">Jewelry Care</a></li>
+                        <li><a href="custom-orders.html">Custom Orders</a></li>
+                        <li><a href="#">Our Story</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__heading">Customer Service</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2025 Luxe Gems. All rights reserved.</p>
+                <div class="footer__payment">
+                    <span>Payment Methods:</span>
+                    <img src="../images/payment-methods.png" alt="Accepted payment methods" width="200" height="30">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
